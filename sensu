@@ -1,0 +1,14 @@
+#!/usr/bin/dumb-init /bin/sh
+
+case $1 in
+    server)
+        exec /opt/sensu/bin/sensu-server -d /etc/sensu/
+        ;;
+    api)
+        exec /opt/sensu/bin/sensu-api -d /etc/sensu/
+        ;;
+    *)
+        echo "Launch either 'api' or 'server'"
+        exit 1
+        ;;
+esac
