@@ -14,7 +14,7 @@ RUN wget https://github.com/Yelp/dumb-init/releases/download/v${DUMB_INIT_VERSIO
     && dpkg -i dumb-init_${DUMB_INIT_VERSION}_amd64.deb \
     && rm dumb-init_${DUMB_INIT_VERSION}_amd64.deb
 
-ENV SENSU_VERSION 0.22.1-1
+ENV SENSU_VERSION 0.23.0-1
 
 RUN apt-get update \
     && apt-get install sensu=$SENSU_VERSION \
